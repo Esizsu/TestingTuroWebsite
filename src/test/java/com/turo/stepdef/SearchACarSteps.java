@@ -53,10 +53,12 @@ public class SearchACarSteps  {
 
     @And("User clicks on More filters menu and select All-Star Host")
     public void userClicksOnMoreFiltersMenuAndSelectAllStarHost() {
+        searchACar.moreFiltersOptions();
     }
 
     @And("select CAR Vehicle types and select {string} then clicks on upper arrow")
-    public void selectCARVehicleTypesAndSelectThenClicksOnUpperArrow(String arg0) {
+    public void selectCARVehicleTypesAndSelectThenClicksOnUpperArrow(String vehicle_makes) {
+        searchACar.selectCarAndVehicleMakes(vehicle_makes);
     }
 
     @And("User adjust the Vehicle years range")
