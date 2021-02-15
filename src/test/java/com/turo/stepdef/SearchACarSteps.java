@@ -51,58 +51,7 @@ public class SearchACarSteps  {
         searchACar.clickSearchButton();
     }
 
-    @And("User clicks on More filters menu and select All-Star Host")
-    public void userClicksOnMoreFiltersMenuAndSelectAllStarHost() {
-        searchACar.moreFiltersOptions();
-    }
 
-    @And("select CAR Vehicle types and select {string} then clicks on upper arrow")
-    public void selectCARVehicleTypesAndSelectThenClicksOnUpperArrow(String vehicle_makes) {
-        searchACar.selectCarAndVehicleMakes(vehicle_makes);
-    }
 
-    @And("User adjust the Vehicle years range")
-    public void userAdjustTheVehicleYearsRange() {
-    }
-
-    @Then("User select the Transmission clicks on view results")
-    public void userSelectTheTransmissionClicksOnViewResults() {
-    }
-
-    @And("User clicks on Sort By menu and select an option then clicks on apply")
-    public void userClicksOnSortByMenuAndSelectAnOptionThenClicksOnApply() {
-    }
-
-    @And("User clicks on Price menu and adjust the price range then clicks on view results")
-    public void userClicksOnPriceMenuAndAdjustThePriceRangeThenClicksOnViewResults() {
-    }
-
-    @And("User clicks on Book instantly menu and clicks on view results")
-    public void userClicksOnBookInstantlyMenuAndClicksOnViewResults() {
-    }
-
-    @And("User clicks on Delivery menu and adjust the distance range then clicks on view results")
-    public void userClicksOnDeliveryMenuAndAdjustTheDistanceRangeThenClicksOnViewResults() {
-    }
-
-    @And("User clicks on Distance included menu and select the distance then clicks on  apply button")
-    public void userClicksOnDistanceIncludedMenuAndSelectTheDistanceThenClicksOnApplyButton() {
-    }
-
-    @Then("User selects the first car in the list")
-    public void userSelectsTheFirstCarInTheList() {
-    }
-
-    @And("Verify that Pickup & return location is present")
-    public void verifyThatPickupReturnLocationIsPresent() {
-    }
-
-    @Then("User selects Pickup & return location")
-    public void userSelectsPickupReturnLocation() {
-    }
-
-    @And("User clicks on Continue button")
-    public void userClicksOnContinueButton() {
-    }
 
 }

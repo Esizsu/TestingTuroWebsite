@@ -24,41 +24,15 @@ public class SearchACar extends Base{
     @FindBy(xpath = "//input[@placeholder='Start date']")
     public WebElement startDate;
 
-    @FindBy(xpath = "//button[@type='submit']")
-    public WebElement searchButton;
-
-//    @FindBy(xpath = "//div[@aria-label='Move forward to switch to the next month']")
-//    public WebElement nextMonthArrowClick;
+    @FindBy(xpath = "//div[@aria-label='Move forward to switch to the next month']")
+    public WebElement nextMonthClick;
 
 //    @FindBy(xpath = "//div[@class='DateRangePicker_picker DateRangePicker_picker__horizontal DateRangePicker_picker__with_header seo-pages-jonmmy']")
 //    public WebElement daysTable1;
 
-    @FindBy(xpath = "//div[@aria-label='Move forward to switch to the next month']")
-    public WebElement nextMonthClick;
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement searchButton;
 
-    @FindBy(xpath = "//div[@class='searchFilter desktopMoreFilters']//button[@type='button']")
-    public WebElement moreFiltersButton;
-
-    @FindBy(xpath = "//label[@for='allStarHost']//span[@class='styledCheckbox-label']")
-    public WebElement allStarHost;
-
-    @FindBy(xpath = "//div[@class='searchFilterBar']//div[7]//div[2]//div[1]//span[1]")
-    public WebElement vehicleTypesButton;
-
-    @FindBy(xpath = "//span[@class='imageMultiSelectOption-icon typeIcon typeIcon--car']")
-    public WebElement car;
-
-    @FindBy(xpath = "//select[@id='makes']")
-    public WebElement vehicleMakes;
-
-    @FindBy(xpath="//option[@value='Lexus']")
-    public WebElement lexus;
-
-    @FindBy (xpath = "//span[@class='rangeSliderField-label']")
-    public WebElement yearText;
-
-    @FindBy (xpath = "//div[contains(text(), 'Number of seats')]")
-    public  WebElement yearSlider;
 
 
 
@@ -138,22 +112,6 @@ public class SearchACar extends Base{
         logger.info("User clicked search button.");
 
     }
-    public void moreFiltersOptions() {
-        moreFiltersButton.click();
-        allStarHost.click();
-
-    }
-    public void selectCarAndVehicleMakes(String vehicle_makes) {
-        vehicleTypesButton.click();
-        car.click();
-
-        waitSomeTime(2L);
-        Select select =new Select(vehicleMakes);
-        scrollDown(lexus);
-        waitSomeTime(3L);
-        select.selectByVisibleText(vehicle_makes);
-    }
-
 
 
 
