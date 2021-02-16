@@ -52,7 +52,25 @@ public class AdvancedSearchSteps {
         advancedSearch.clickOnSortBy();
     }
 
+    @And("User clicks on Price menu and adjust the price range then clicks on view results")
+    public void userClicksOnPriceMenuAndAdjustThePriceRangeThenClicksOnViewResults() {
+        advancedSearch.clickOnPrice();
+    }
 
+    @And("User clicks on Book instantly menu and clicks on view results")
+    public void userClicksOnBookInstantlyMenuAndClicksOnViewResults() {
+        advancedSearch.clickOnBookInstant();
+    }
+
+    @And("User clicks on Delivery menu and adjust the distance range then clicks on view results")
+    public void userClicksOnDeliveryMenuAndAdjustTheDistanceRangeThenClicksOnViewResults() {
+        advancedSearch.adjustDeliveryOption();
+    }
+
+    @And("User clicks on Distance included menu and select the distance then clicks on  apply button")
+    public void userClicksOnDistanceIncludedMenuAndSelectTheDistanceThenClicksOnApplyButton() {
+        advancedSearch.distanceIncludedOption();
+    }
 
 
 

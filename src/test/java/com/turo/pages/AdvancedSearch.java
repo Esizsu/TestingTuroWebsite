@@ -62,7 +62,20 @@ public class AdvancedSearch extends Base {
     @FindBy(xpath = "//div[@class='searchFilterBar']//div[2]//button[1]")
     public WebElement price;
 
+    @FindBy(css = "div[class='rc-slider-handle rc-slider-handle-1']")
+    public WebElement leftSlider;
 
+    @FindBy(xpath = "//div[@class='rc-slider-handle rc-slider-handle-2']")
+    public WebElement rightSlider;
+
+    @FindBy(css = "button[class='buttonSchumi buttonSchumi--medium buttonSchumi--purple searchFilterPopupDesktop-submitButton']")
+    public WebElement viewResult;
+
+    @FindBy(xpath = "//div[@class='searchFilterBar']//div[3]//button[1]")
+    public WebElement bookInstantly;
+
+    @FindBy(css = "button[class='buttonSchumi buttonSchumi--medium buttonSchumi--purple searchFilterPopupDesktop-submitButton']")
+    public WebElement viewResult2;
 
     @FindBy(xpath = "//div[@class='searchFilterBar']//div[4]//button[1]")
     public WebElement deliveryButton;
@@ -129,4 +142,45 @@ public class AdvancedSearch extends Base {
         waitSomeTime(2L);
 
     }
-}
+
+    public void clickOnPrice() {
+        price.click();
+        Actions move = new Actions(MyDriver.get());
+        // We can get coordinate with coordinates extension in google chrome.
+        // Left slider move to 50$. x coordinate is moving 68 pixel to right from left.
+        Action actionLeft = move.dragAndDropBy(leftSlider, 68, 234).build();
+        actionLeft.perform();
+
+        // Right slider move to 200$. x coordinate is moving -90 pixel   to left from right.
+        Action actionRight = (Action) move.dragAndDropBy(rightSlider, -90, 234).build();
+        ((Action) actionRight).perform();
+
+        viewResult.click();
+        waitSomeTime(2L);
+    }
+
+    public void clickOnBookInstant() {
+        bookInstantly.click();
+        viewResult2.click();
+        waitSomeTime(2L);
+    }
+    public void adjustDeliveryOption() {
+        deliveryButton.click();
+        Actions move = new Actions(MyDriver.get());
+
+        Action actionRight =  move.dragAndDropBy(deliveryRightSlider, -105, 234).build();
+        actionRight.perform();
+        waitSomeTime(2L);
+        viewResult3.click();
+    }
+
+    public void distanceIncludedOption() {
+        waitSomeTime(2L);
+        distanceButton.click();
+        distance200miles.click();
+        waitSomeTime(2L);
+        applyButton1.click();
+    }
+
+    }
+
