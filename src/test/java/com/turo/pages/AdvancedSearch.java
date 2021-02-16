@@ -11,7 +11,6 @@ import org.slf4j.LoggerFactory;
 
 public class AdvancedSearch extends Base {
     Logger logger = LoggerFactory.getLogger(AdvancedSearch.class);
-    MyDriver myDriver = new MyDriver();
 
 
     @FindBy(xpath = "//div[@class='searchFilter desktopMoreFilters']//button[@type='button']")
