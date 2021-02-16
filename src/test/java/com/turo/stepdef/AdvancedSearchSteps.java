@@ -39,31 +39,21 @@ public class AdvancedSearchSteps {
 
     @And("User adjust the Vehicle years range")
     public void userAdjustTheVehicleYearsRange() {
+        advancedSearch.adjustYears();
     }
 
     @Then("User select the Transmission clicks on view results")
     public void userSelectTheTransmissionClicksOnViewResults() {
+        advancedSearch.selectTransmission();
     }
-
+    // Start from the Sort By menu
     @And("User clicks on Sort By menu and select an option then clicks on apply")
     public void userClicksOnSortByMenuAndSelectAnOptionThenClicksOnApply() {
+        advancedSearch.clickOnSortBy();
     }
 
-    @And("User clicks on Price menu and adjust the price range then clicks on view results")
-    public void userClicksOnPriceMenuAndAdjustThePriceRangeThenClicksOnViewResults() {
-    }
 
-    @And("User clicks on Book instantly menu and clicks on view results")
-    public void userClicksOnBookInstantlyMenuAndClicksOnViewResults() {
-    }
 
-    @And("User clicks on Delivery menu and adjust the distance range then clicks on view results")
-    public void userClicksOnDeliveryMenuAndAdjustTheDistanceRangeThenClicksOnViewResults() {
-    }
-
-    @And("User clicks on Distance included menu and select the distance then clicks on  apply button")
-    public void userClicksOnDistanceIncludedMenuAndSelectTheDistanceThenClicksOnApplyButton() {
-    }
 
 
 }
