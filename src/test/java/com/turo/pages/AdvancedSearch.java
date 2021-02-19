@@ -132,6 +132,7 @@ public class AdvancedSearch extends Base {
         viewResult4.click();
     }
 
+
     public void clickOnSortBy() {
         waitSomeTime(5L);
         sortBy.click();
