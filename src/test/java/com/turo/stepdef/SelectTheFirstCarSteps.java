@@ -15,8 +15,14 @@ public class SelectTheFirstCarSteps {
     public void userIsOnLandingPageToSelect() {
     }
 
-    @And("User selects the first car in the list and verify the selected car title is present")
-    public void userSelectsTheFirstCarInTheListAndVerifyTheSelectedCarTitleIsPresent() {
+
+    @And("User selects the first car in the list")
+    public void userSelectsTheFirstCarInTheList() {
+    }
+
+
+    @And("Users verify the selected car title is present")
+    public void usersVerifyTheSelectedCarTitleIsPresent() {
     }
 
     @Then("User selects Pickup location")
